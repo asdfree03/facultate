@@ -13,6 +13,7 @@ index on codf to mcodf
 use
 use farmacie.dbf
 index on codf to fcodf
+index on nume to fnume
 use
 use comanda.dbf in 1 alias com
 use farmacie.dbf in 2 alias farm
@@ -33,6 +34,7 @@ TEXT
 T- Terminare program
 ENDTEXT
 WAIT TO R
+do rbas
 IF.NOT. R $ '1234567Tt'
  ? 'FUNCTIA ' + R + ' inexistenta'
  WAIT
@@ -66,6 +68,10 @@ DO CASE
  case R='6'
 	do p6
 	case R='7'
+use comanda.dbf in 1 alias com
+use farmacie.dbf in 2 alias farm
+use medicament.dbf in 3  alias med
+use plata.dbf in 4 alias pl
 	select 1
 	list
 	select 2
@@ -74,6 +80,7 @@ DO CASE
 	list
 	select 4
 	list
+	wait
 	use
  case R $'Tt'
 	use
@@ -81,6 +88,24 @@ DO CASE
 	return
 endcase
 enddo
+
+procedure rbas
+select 1
+close all
+use comanda.dbf excl
+reindex
+use
+select 2
+close all
+use farmacie.dbf excl
+reindex
+use
+select 3
+close all
+use medicament.dbf excl
+reindex
+use
+return
 
 procedure adaugaFarmacie
 use comanda.dbf in 1 alias com
@@ -100,13 +125,12 @@ use farmacie.dbf in 2 alias farm
 use medicament.dbf in 3  alias med
 use plata.dbf in 4 alias pl
 	parameters vid,vnume,vcat,vstoc,vfarm
-	use farmacie.dbf
-	locate for nume = vfarm
-	vnfarm = codF
-	use
-	use medicament.dbf
+	select 2
+	set index to fnume
+	seek vfarm
+	select 3
 	append BLANK
-	replace CodM with vid, nume with vnume, categorie with vcat, stoc with vstoc,codf with vnfarm
+	replace CodM with vid, nume with vnume, categorie with vcat, stoc with vstoc,codf with farm->codf
 	use
 return
 
@@ -139,22 +163,30 @@ use plata.dbf in 4 alias pl
 return
 
 procedure p4
+set exact on
+select 3
+close all
+use medicament.dbf excl
+reindex
+use
 use comanda.dbf in 1 alias com
 use farmacie.dbf in 2 alias farm
 use medicament.dbf in 3  alias med
 use plata.dbf in 4 alias pl
 	select 2
+	set index to fnume
+	seek "Catena"
 	set index to fcodf
-	locate for nume = "Catena"
 	select 3
+	set relation to codf into farm constr
 	set index to mcodf
-	seek farm->codf
 	do while med->categorie = "Antibiotice" .and. med->codf = farm->codf
 	?med->nume,med->categorie,med->stoc
 	skip
 	enddo
 	wait
 	use
+	set exact off
 return
 procedure p5
 use comanda.dbf in 1 alias com
@@ -189,6 +221,12 @@ use plata.dbf in 4 alias pl
 	set delete on
 	delete
 	endscan
+	select 3
+	close all
+	use medicament.dbf excl
+	pack
+	use
+	use medicament.dbf in 3 alias med
 	wait
 	use
 return
