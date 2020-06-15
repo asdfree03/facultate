@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1585076464 source:e:\facultate\paa\arborib\probl2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,43 @@
+E:/AC/lab7/ssgm_1.v {1 {vlog -work work -stats=none E:/AC/lab7/ssgm_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ssgm_1
+
+Top level modules:
+	ssgm_1
+
+} {} {}} E:/AC/lab7/rgst.v {1 {vlog -work work -stats=none E:/AC/lab7/rgst.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module rgst
+
+Top level modules:
+	rgst
+
+} {} {}} E:/AC/lab7/sigma_iter.v {1 {vlog -work work -stats=none E:/AC/lab7/sigma_iter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sigma_iter
+
+Top level modules:
+	sigma_iter
+
+} {} {}} E:/AC/lab7/ssgm_o.v {1 {vlog -work work -stats=none E:/AC/lab7/ssgm_o.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ssgm_o
+
+Top level modules:
+	ssgm_o
+
+} {} {}} E:/AC/mux.v {1 {vlog -work work -stats=none E:/AC/mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} E:/AC/lab7/ssgm_o_tb.v {1 {vlog -work work -stats=none E:/AC/lab7/ssgm_o_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ssgm_o_tb
+
+Top level modules:
+	ssgm_o_tb
+
+} {} {}}

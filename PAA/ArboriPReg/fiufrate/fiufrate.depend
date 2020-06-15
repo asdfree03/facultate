@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1582145604 source:e:\facultate\paa\arboripreg\fiufrate\main.c
+	<stdio.h>
+	<stdlib.h>
+

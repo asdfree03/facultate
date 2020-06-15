@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+#define N 10
+
+int mat[N][N];
+int vizit[N];
+int aparitii[N+1];
+int nrNoduri, nrNoduriEliminate;
+
+
+void ReadGraph()
+{
+    FILE *in;
+    int i, j;
+    int nod;
+
+    in = fopen("problema3-5.txt","r");
+    fscanf(in,"%d",&nrNoduri);
+
+    for(i=1; i<=nrNoduri; i++)
+        for(j=1; j<=nrNoduri; j++)
+        {
+            fscanf(in,"%d",&nod);
+            mat[i][j] = mat[j][i] = nod;
+        }
+}
+
+
+void PrintGraph()
+{
+    int i, j;
+
+    for(i=1; i<=nrNoduri; i++)
+    {
+        for(j=1; j<=nrNoduri; j++)
+            printf("%d ",mat[i][j]);
+        printf("\n");
+    }
+}
+
+
+void Parcurgere(int nod, int val)
+{
+    int i;
+
+    vizit[nod] = val;
+
+    for(i=1; i<=nrNoduri; i++)
+        if(mat[nod][i] == 1 && vizit[i] == 0)
+            Parcurgere(i,val);
+}
+
+
+void DoSomeMagicBaby()
+{
+    int i;
+
+    for(i=1; i<=nrNoduri; i++)
+        aparitii[vizit[i]]++;
+    
+    int max = aparitii[1], maxPoz = 1;
+    for(i=1; i<=N+1; i++)
+        if(aparitii[i] > max)
+        {
+            maxPoz = i;
+            max = aparitii[i];
+        }
+
+    for(i=1; i<=nrNoduri; i++)
+        if(vizit[i] != maxPoz)
+        {
+            //suprimaNod(i);  // functia elimina si muchiile
+            printf("Am sters nodul %d\n",i);
+            nrNoduriEliminate++;
+        }
+}
+
+
+void VerificaConex()
+{
+    int i, conex = 0;
+
+    for(i=1; i<=nrNoduri; i++)
+        if(vizit[i] == 0)
+        {
+            conex++;
+            Parcurgere(i,conex);
+        }
+
+    if(conex != 1)
+    {
+        DoSomeMagicBaby();
+    }
+    else printf("Graful e conex!\n\n");
+}
+
+
+int main()
+{
+    ReadGraph();
+    PrintGraph();
+    printf("\n\n\n");
+
+    VerificaConex();
+    printf("\nAm sters %d noduri",nrNoduriEliminate);
+    printf("\n\n\n");
+
+    return 0;
+}

@@ -1,0 +1,109 @@
+// Daca grafu nu e conex. adaugam nr minim de muchii sa fie conex
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+#define N 10
+
+int mat[N][N];
+int vizit[N];
+int nrNoduri, nrMuchiiAdaugate;
+
+
+void ReadGraph()
+{
+    FILE *in;
+    int i, j;
+    int nod;
+
+    in = fopen("matrice4.txt","r");
+    fscanf(in,"%d",&nrNoduri);
+
+    for(i=1; i<=nrNoduri; i++)
+        for(j=1; j<=nrNoduri; j++)
+        {
+            fscanf(in,"%d",&nod);
+            mat[i][j] = mat[j][i] = nod;
+        }
+}
+
+
+void PrintGraph()
+{
+    int i, j;
+
+    for(i=1; i<=nrNoduri; i++)
+    {
+        for(j=1; j<=nrNoduri; j++)
+            printf("%d ",mat[i][j]);
+        printf("\n");
+    }
+}
+
+
+void Parcurgere(int nod)
+{
+    int i;
+
+    vizit[nod] = 1;
+    //printf("%d ");
+
+    for(i=1; i<=nrNoduri; i++)
+        if(mat[nod][i] == 1 && vizit[i] == 0)
+            Parcurgere(i);
+}
+
+
+void MegaAwesomeFancyFunction(int nod)
+{
+    int i;
+
+    Parcurgere(nod);
+
+    for(i=1; i<=nrNoduri; i++)
+        if(vizit[i] == 0)
+        {
+            mat[nod][i] = mat[i][nod] = 2;
+            nrMuchiiAdaugate++;
+            MegaAwesomeFancyFunction(i);
+        }
+}
+
+
+void VerificaConex()
+{
+    int i, conex = 1;
+
+    Parcurgere(1);
+
+    for(i=1; i<=nrNoduri; i++)
+        if(vizit[i] == 0)
+        {
+            conex = 0;
+            break;
+        }
+
+    if(conex == 0)
+    {
+        for(i=1; i<=nrNoduri; i++)
+            vizit[i] = 0;
+        MegaAwesomeFancyFunction(1);
+    }
+    else printf("Graful e conex!\n\n");
+}
+
+
+int main()
+{
+    ReadGraph();
+    PrintGraph();
+    printf("\n\n\n");
+
+    VerificaConex();
+    PrintGraph();
+    printf("\n Am adaugat %d muchii",nrMuchiiAdaugate);
+    printf("\n\n\n");
+
+    return 0;
+}

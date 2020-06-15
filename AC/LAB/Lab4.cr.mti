@@ -1,0 +1,15 @@
+E:/AC/fsm_3s.v {1 {vlog -work work -stats=none E:/AC/fsm_3s.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fsm_3s
+
+Top level modules:
+	fsm_3s
+
+} {} {}} E:/AC/fsm_3s_tb.v {1 {vlog -work work -stats=none E:/AC/fsm_3s_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fsm_3s_tb
+
+Top level modules:
+	fsm_3s_tb
+
+} {} {}}

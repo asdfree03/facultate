@@ -1,0 +1,85 @@
+/*Diferenta dintre nr de fete si nr de baieti la STUDENTI*/
+
+#include<stdio.h>
+#include<stdlib.h> 
+typedef struct nod{
+int cheie;
+int gen;
+struct nod *stanga;
+struct nod *dreapta;
+}nod;
+nod *rad;
+int tab[7] = {5,2,7,4,9,10,8};
+int  tab2[7]={0,1,1,1,1,1,0};
+
+nod *creeaza(nod **radacina, int cheie_nou,int gen_nou)
+{
+nod *nou = (nod *)malloc(sizeof(nod));
+nou->cheie = cheie_nou;
+nou->gen=gen_nou;
+nou->stanga = NULL;
+nou->dreapta = NULL;
+return nou;
+}
+nod *insereaza(nod **radacina, int cheie_nou,int gen_nou)
+{
+if ((*radacina) == NULL)
+(*radacina) = creeaza(radacina, cheie_nou,gen_nou);
+else
+if (cheie_nou >(*radacina)->cheie )
+insereaza(&(*radacina)->dreapta, cheie_nou,gen_nou);
+if (cheie_nou < (*radacina)->cheie)
+insereaza(&(*radacina)->stanga, cheie_nou,gen_nou);
+
+}
+void afisare(nod *radacina)
+{
+if (radacina != NULL)
+{
+printf("%d\n",radacina->cheie);
+afisare(radacina->stanga);
+afisare(radacina->dreapta);
+
+
+}
+}
+int nr_f,nr_b;
+void functie(nod *rad){
+//    if(rad==NULL)
+  //      printf("Nu exista");
+    if(rad!=NULL){
+        if(rad->gen==0){
+            nr_f++;
+        functie(rad->stanga);
+        functie(rad->dreapta);
+        }
+        else {
+            nr_b++;
+            functie(rad->stanga);
+            functie(rad->dreapta);
+        }
+
+    }
+}
+
+int functie1(nod *rad){
+    functie(rad);
+    if(nr_f>nr_b)
+        return nr_f-nr_b;
+    else return nr_b-nr_f;
+}
+
+
+
+
+int main()
+{int i,b;
+for ( i = 0; i < 7; i++)
+insereaza(&rad, tab[i],tab2[i]);
+afisare(rad);
+printf("\n");
+b=functie1(rad);
+printf("Sa fie bine %d",b);
+}
+
+

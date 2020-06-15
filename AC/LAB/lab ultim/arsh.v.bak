@@ -1,0 +1,8 @@
+module arsh(
+	input [15:0]a, input [3:0]i,
+	output [15:0]o
+);
+	generate
+		genvar k;
+		for(k=0;k<i;k=k+1) assign o={a[15],a[15:1]}
+endmodule

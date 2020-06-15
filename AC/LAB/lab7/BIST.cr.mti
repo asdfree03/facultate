@@ -1,0 +1,36 @@
+E:/AC/lab7/lfsr_4.v {1 {vlog -work work -stats=none E:/AC/lab7/lfsr_4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lfsr_4
+
+Top level modules:
+	lfsr_4
+
+} {} {}} E:/AC/lab7/lsfr_tb.v {1 {vlog -work work -stats=none E:/AC/lab7/lsfr_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lsfr_tb
+
+Top level modules:
+	lsfr_tb
+
+} {} {}} E:/AC/lab7/gt10.v {1 {vlog -work work -stats=none E:/AC/lab7/gt10.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module gt10
+
+Top level modules:
+	gt10
+
+} {} {}} E:/AC/lab7/sisr_4.v {1 {vlog -work work -stats=none E:/AC/lab7/sisr_4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lfsr_4
+
+Top level modules:
+	lfsr_4
+
+} {} {}} E:/AC/lab7/dff_tb.v {1 {vlog -work work -stats=none E:/AC/lab7/dff_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module dff_tb
+
+Top level modules:
+	dff_tb
+
+} {} {}}

@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/AC/Preg test
+vcomparator
+Z0 !s110 1578555441
+!i10b 1
+!s100 Z[P?QQU=CnAl^@<hR5dI^3
+IG>XYHH[QP<FimF>U=OJ@L3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/AC/Test
+w1578552492
+8E:\AC\Test\comparator.v
+FE:\AC\Test\comparator.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1578555441.000000
+!s107 E:\AC\Test\comparator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Test\comparator.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vcomparator_tb
+R0
+!i10b 1
+!s100 hXPKfZihElXJHV^n1?Q=63
+I=l?az7_7JcjmESD]IVIan1
+R1
+R2
+w1578552388
+8E:\AC\Test\comparator_tb.v
+FE:\AC\Test\comparator_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Test\comparator_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Test\comparator_tb.v|
+!i113 1
+R5
+R6
+vdiv6_cntr
+Z7 !s110 1578555442
+!i10b 1
+!s100 7<Ocn8I2ZWRCf5]VZ0V;51
+IDFXW6SXXYTFMfIzkW0V^n2
+R1
+R2
+w1578555440
+8E:\AC\Test\div6_cntr.v
+FE:\AC\Test\div6_cntr.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1578555442.000000
+!s107 E:\AC\Test\div6_cntr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Test\div6_cntr.v|
+!i113 1
+R5
+R6
+vdiv6_cntr_tb
+R7
+!i10b 1
+!s100 4<34dzF[ADPg^6MGEA7[^3
+Ikfc[;Bo<Q@B?WXGk7D4521
+R1
+R2
+w1578555374
+8E:\AC\Test\div6_cntr_tb.v
+FE:\AC\Test\div6_cntr_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:\AC\Test\div6_cntr_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Test\div6_cntr_tb.v|
+!i113 1
+R5
+R6
+vminimization
+R0
+!i10b 1
+!s100 [Tm1?cPMia^VdnZ41aJTY2
+ILEbB>5@V2>`QMkRn^ggGV3
+R1
+R2
+w1578553082
+8E:\AC\Test\minimization.v
+FE:\AC\Test\minimization.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Test\minimization.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Test\minimization.v|
+!i113 1
+R5
+R6
+vminimization_tb
+R7
+!i10b 1
+!s100 PAGLC?7ZeCY40<6?@1Hc51
+IRMm`jF7J2;zGVM4P6BCc93
+R1
+R2
+w1578553344
+8E:\AC\Test\minimization_tb.v
+FE:\AC\Test\minimization_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Test\minimization_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Test\minimization_tb.v|
+!i113 1
+R5
+R6
+vrgst
+R7
+!i10b 1
+!s100 J?Ii5hihAR=e28D:;WBYC0
+I`R3_]_U1mRY:X3CMnUgo72
+R1
+R2
+w1578554702
+8E:\AC\Test\rgst.v
+FE:\AC\Test\rgst.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 E:\AC\Test\rgst.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Test\rgst.v|
+!i113 1
+R5
+R6

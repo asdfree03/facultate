@@ -1,0 +1,107 @@
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (second-branch)
+$ git status
+On branch second-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/loose/oose/fis/documents/TXT.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/loose/oose/fis/documents/Document.java
+        modified:   src/loose/oose/fis/documents/TXT.java
+
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (second-branch)
+$ git branch new-branch
+fatal: A branch named 'new-branch' already exists.
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (second-branch)
+$ git checkout new-branch
+error: Your local changes to the following files would be overwritten by checkout:
+        src/loose/oose/fis/documents/TXT.java
+Please commit your changes or stash them before you switch branches.
+error: Your local changes to the following files would be overwritten by checkout:
+        src/loose/oose/fis/documents/Document.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (second-branch)
+$ git status
+On branch second-branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/loose/oose/fis/documents/TXT.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/loose/oose/fis/documents/Document.java
+        modified:   src/loose/oose/fis/documents/TXT.java
+
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (second-branch)
+$ git fetch
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (second-branch)
+$ git checkout new-branch
+error: Your local changes to the following files would be overwritten by checkout:
+        src/loose/oose/fis/documents/TXT.java
+Please commit your changes or stash them before you switch branches.
+error: Your local changes to the following files would be overwritten by checkout:
+        src/loose/oose/fis/documents/Document.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (second-branch)
+$ git checkout new-branch
+Switched to branch 'new-branch'
+Your branch is up to date with 'origin/new-branch'.
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (new-branch)
+$ git master
+git: 'master' is not a git command. See 'git --help'.
+
+The most similar command is
+        restore
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (new-branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (master)
+$ git merge new-branch
+Updating 9245ec1..9dd4c35
+Fast-forward
+ src/loose/oose/fis/documents/Document.java |  2 +-
+ src/loose/oose/fis/documents/TXT.java      | 29 +++++++++++++++++++++++++++++
+ 2 files changed, 30 insertions(+), 1 deletion(-)
+ create mode 100644 src/loose/oose/fis/documents/TXT.java
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/asdfree03/fis.git
+   9245ec1..9dd4c35  master -> master
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (master)
+$ git branch -D new-branch
+Deleted branch new-branch (was 9dd4c35).
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (master)
+$ git push origin --delete new-branch
+To https://github.com/asdfree03/fis.git
+ - [deleted]         new-branch
+
+User@Ion-PC MINGW64 /e/Facultate/FIS/lab1-master (master)
+$

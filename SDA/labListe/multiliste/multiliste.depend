@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1575908991 source:e:\sda\labliste\multiliste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

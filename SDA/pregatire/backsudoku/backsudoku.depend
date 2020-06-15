@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1578864364 source:e:\facultate\sda\pregatire\backsudoku\main.c
+	<stdio.h>
+	<stdlib.h>
+

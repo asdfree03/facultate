@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1578171220 source:e:\sda\recursivitate\asd\main.cpp
+	<iostream>
+	<fstream>
+

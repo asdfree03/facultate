@@ -1,0 +1,8 @@
+E:/AC/decoder.v {1 {vlog -work work -stats=none E:/AC/decoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module decoder
+
+Top level modules:
+	decoder
+
+} {} {}}

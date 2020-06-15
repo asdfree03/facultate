@@ -1,0 +1,9 @@
+module dff(
+	input d,rst,clk,set,
+	output reg q
+);
+	always @(posedge clk, posedge rst) begin
+		
+	end
+endmodule
+

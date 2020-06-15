@@ -1,0 +1,10 @@
+module gt10(
+	input [3:0]a,
+	output b
+);
+assign b = a > 10 ? 1 : 0;
+always @(a) begin
+	if(a > 10) b<=1;
+	else b<=0;
+end
+endmodule

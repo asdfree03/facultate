@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.0
+va2
+Z0 !s110 1578518577
+!i10b 1
+!s100 ZW2iiGdXAzCYMO77Ng?=o1
+IeZC9O1:PBMaf<Jd12UL`S3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/AC/Preg test
+w1578513357
+8E:\AC\Preg test\1a.v
+FE:\AC\Preg test\1a.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1578518577.000000
+!s107 E:\AC\Preg test\1a.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Preg test\1a.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+va2_tb
+R0
+!i10b 1
+!s100 ngVBXWc<J0NY`6Tln364P3
+ID426;f6F@l[DOH_fGDlL?1
+R1
+R2
+w1578513353
+8E:\AC\Preg test\a2_tb.v
+FE:\AC\Preg test\a2_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Preg test\a2_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Preg test\a2_tb.v|
+!i113 1
+R5
+R6
+vdff
+R0
+!i10b 1
+!s100 l=[6[Qd6od=zgKjiV?cPn2
+IkgCkkWcTl^1i8124Q<N4z3
+R1
+R2
+w1578514386
+8E:\AC\Preg test\dff.v
+FE:\AC\Preg test\dff.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Preg test\dff.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Preg test\dff.v|
+!i113 1
+R5
+R6
+vex2
+R0
+!i10b 1
+!s100 Snd<76D1nbkGC^dWNa7]>2
+I7Cne=i`?n8f8a4S]RmL7E2
+R1
+R2
+w1578517914
+8E:\AC\Preg test\ex2.v
+FE:\AC\Preg test\ex2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Preg test\ex2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Preg test\ex2.v|
+!i113 1
+R5
+R6
+vex2_tb
+R0
+!i10b 1
+!s100 ze_BhNH3OPZUBe?2mO33Q1
+IP2<e`h:>ZFPd2V74oAU=G3
+R1
+R2
+w1578517834
+8E:\AC\Preg test\ex2_tb.v
+FE:\AC\Preg test\ex2_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Preg test\ex2_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Preg test\ex2_tb.v|
+!i113 1
+R5
+R6
+vlfsr
+R0
+!i10b 1
+!s100 XV@jXm4IKS[RZlFbz8C[z3
+IVRfh^LGWJBo1QTIfLUYc:2
+R1
+R2
+w1578518576
+8E:\AC\Preg test\lfsr.v
+FE:\AC\Preg test\lfsr.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Preg test\lfsr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Preg test\lfsr.v|
+!i113 1
+R5
+R6
+vlsfr_tb
+R0
+!i10b 1
+!s100 I<H0]Pj8<2kIeR^C0n2Z22
+I0HjQKWLhVnKP3kW>DWzQV2
+R1
+R2
+w1578516089
+8E:\AC\Preg test\lsfr_tb.v
+FE:\AC\Preg test\lsfr_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\AC\Preg test\lsfr_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\AC\Preg test\lsfr_tb.v|
+!i113 1
+R5
+R6

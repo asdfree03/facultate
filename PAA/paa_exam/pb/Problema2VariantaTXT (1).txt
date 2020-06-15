@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+#define N 10
+
+int mat[N][N];
+int vizit[N];
+int nrNoduri, cicluri;
+
+
+void ReadGraph()
+{
+    FILE *in;
+    int i, j;
+    int nod;
+
+    in = fopen("problema2-6.txt","r");
+    fscanf(in,"%d",&nrNoduri);
+
+    for(i=1; i<=nrNoduri; i++)
+        for(j=1; j<=nrNoduri; j++)
+        {
+            fscanf(in,"%d",&nod);
+            mat[i][j] = mat[j][i] = nod;
+        }
+}
+
+
+void PrintGraph()
+{
+    int i, j;
+
+    for(i=1; i<=nrNoduri; i++)
+    {
+        for(j=1; j<=nrNoduri; j++)
+            printf("%d ",mat[i][j]);
+        printf("\n");
+    }
+}
+
+
+void CautaCiclu(int nod)
+{
+    int i;
+
+    vizit[nod] = 1;
+
+    for(i=1; i<=nrNoduri; i++)
+    {
+        if(cicluri !=0 )
+            break;
+
+        if(mat[nod][i] == 1)
+        {
+            mat[i][nod] = 2;
+            if(vizit[i] == 0)
+                CautaCiclu(i);
+            else cicluri++;
+        }
+    }
+}
+
+void VerificaCicluri()
+{
+    int i;
+
+    for(i=1; i<=nrNoduri; i++)
+        if(vizit[i] == 0 && cicluri == 0)
+            CautaCiclu(i);
+}
+
+
+int main()
+{
+    ReadGraph();
+    PrintGraph();
+
+    VerificaCicluri();
+    if(cicluri == 0)
+        printf("Graful nu are cicluri!\n\n");
+    else printf("Graful are cel putin un ciclu!\n\n");
+
+    return 0;
+}

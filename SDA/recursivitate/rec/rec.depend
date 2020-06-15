@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1575913874 source:e:\sda\recursivitate\rec\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

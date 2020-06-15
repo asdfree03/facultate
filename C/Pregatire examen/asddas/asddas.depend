@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1549397367 source:e:\c\pregatire examen\asddas\main.cpp
+	<iostream>
+	<conio.h>
+	<fstream>
+	<iomanip>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

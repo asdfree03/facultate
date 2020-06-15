@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1581666047 source:e:\facultate\sda\pregatire\cristilsite\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

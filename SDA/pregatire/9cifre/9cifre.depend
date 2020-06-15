@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1581542274 source:e:\facultate\sda\pregatire\9cifre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdint.h>
+

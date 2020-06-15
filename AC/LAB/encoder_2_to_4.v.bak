@@ -1,0 +1,8 @@
+module encoder_n #(parameter n)(
+input [n-1:0]i,
+output reg [2**n-1:0]o
+);
+always @(i) begin
+	o[i] = 1;
+end
+endmodule

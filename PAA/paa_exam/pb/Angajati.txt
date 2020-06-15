@@ -1,0 +1,52 @@
+angajati.txt
+0 1 2 3 4 5 6 7 8 9 10
+2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010
+1 2 -1 10 -1 6 -1 -1 -1 -1 -1
+-1 5 3 -1 -1 -1 7 8 -1 4 9
+
+
+
+
+#include #include
+typedef struct nod{
+int an,cheie, PF, FD;
+}nod;
+nod angajati[100];
+int n = 11;
+void afisare(){
+int i;
+for(i=0;i if(angajati[i].PF==-1)
+printf("Angajatii care nu au subalterni sunt:%d\n",angajati[i].cheie);
+}
+
+int main()
+{
+FILE *file;
+file = fopen("angajati.txt","r");
+for (int i = 0; i < n; i++)
+fscanf(file,"%d ",&angajati[i].cheie);
+for (int i = 0; i < n; i++)
+fscanf(file,"%d ", &angajati[i].an);
+
+for (int i = 0; i < n; i++)
+fscanf(file,"%d ", &angajati[i].PF);
+for (int i = 0; i < n; i++)
+fscanf(file,"%d ", &angajati[i].FD);
+
+
+for (int i = 0; i < n; i++)
+printf("%d ", angajati[i].cheie);
+printf("\n");
+for (int i = 0; i < n; i++)
+printf("%d ", angajati[i].an);
+printf("\n");
+for (int i = 0; i < n; i++)
+printf("%d ", angajati[i].PF);
+printf("\n");
+for (int i = 0; i < n; i++)
+printf("%d ", angajati[i].FD);
+printf("\n");
+afisare();
+
+}
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1548005035 source:e:\c\pregatire examen\g1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

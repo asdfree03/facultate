@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1576515593 source:e:\sda\recursivitate\probl\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1576515593 source:e:\facultate\sda\recursivitate\probl\main.c
+	<stdio.h>
+	<stdlib.h>
+

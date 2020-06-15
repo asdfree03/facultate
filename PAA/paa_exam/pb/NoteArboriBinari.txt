@@ -1,0 +1,54 @@
+/*AFISEAZA NOTELE UNUI STUDENT INTRE 7 SI 8*/
+
+#include #include typedef struct nod{
+float cheie;
+struct nod *stanga;
+struct nod *dreapta;
+}nod;
+nod *rad;
+float tab[7] = {5,2,7.5,4,7.4,10,7.3};
+
+nod *creeaza(nod **radacina, float cheie_nou)
+{
+nod *nou = (nod *)malloc(sizeof(nod));
+nou->cheie = cheie_nou;
+nou->stanga = NULL;
+nou->dreapta = NULL;
+return nou;
+}
+nod *insereaza(nod **radacina, float cheie_nou)
+{
+if ((*radacina) == NULL)
+(*radacina) = creeaza(radacina, cheie_nou);
+else
+if (cheie_nou >(*radacina)->cheie )
+insereaza(&(*radacina)->dreapta, cheie_nou);
+if (cheie_nou < (*radacina)->cheie)
+insereaza(&(*radacina)->stanga, cheie_nou);
+
+}
+void afisare(nod *radacina)
+{
+if (radacina != NULL)
+{if(radacina->cheie>7&& radacina->cheie<8)
+printf("%.2f\n",radacina->cheie);
+afisare(radacina->stanga);
+afisare(radacina->dreapta);
+
+
+}
+}
+
+
+
+
+int main()
+{
+for (int i = 0; i < 7; i++)
+insereaza(&rad, tab[i]);
+afisare(rad);
+printf("\n");
+
+
+}
+
